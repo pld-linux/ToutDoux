@@ -1,7 +1,7 @@
 Summary:	ToutDoux is a small project manager (for GNOME)
 Name:		ToutDoux
-Version:	1.2.1
-Release:	2
+Version:	1.2.2
+Release:	1
 License:	GPL
 Group:		Networking
 Group(pl):	Sieciowe
@@ -67,12 +67,12 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/toutdoux/plugins
 %attr(755,root,root) %{_libdir}/toutdoux/plugins/lib*so*
 %attr(755,root,root) %{_libdir}/toutdoux/plugins/lib*la
-%{_libdir}/toutdoux/compat.xml
 %{_applnkdir}/Utilities/*
 %{_datadir}/mime-info/*
 %{_datadir}/pixmaps/toutdoux*
 %{_datadir}/toutdoux
 
 %files devel
+%defattr(644,root,root,755)
 %{_includedir}/*
 %attr(755,root,root) %{_libdir}/lib*so
