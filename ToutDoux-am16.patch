@@ -25,3 +25,27 @@
 -
 -
 +# 	communication_db
+diff -uNr ToutDoux-1.2.6.orig/doc/en/Makefile.am ToutDoux-1.2.6/doc/en/Makefile.am
+--- ToutDoux-1.2.6.orig/doc/en/Makefile.am	Sat Mar 10 16:36:04 2001
++++ ToutDoux-1.2.6/doc/en/Makefile.am	Wed Aug 14 08:39:36 2002
+@@ -76,7 +76,7 @@
+ 	if test $(HAVE_LANG_EN) = yes; \
+ 	then \
+ 	  $(mkinstalldirs) $(DESTDIR)$(TARGET_DIR); \
+-	  for file in toutdoux/*.html toutdoux/*.css; do \
++	  for file in toutdoux/* ; do \
+ 	    basefile=`echo $$file | sed -e 's,^.*/,,'`; \
+ 	    $(INSTALL_DATA) $$file $(DESTDIR)$(TARGET_DIR)/$$basefile; \
+ 	  done; \
+diff -uNr ToutDoux-1.2.6.orig/doc/fr/Makefile.am ToutDoux-1.2.6/doc/fr/Makefile.am
+--- ToutDoux-1.2.6.orig/doc/fr/Makefile.am	Sat Mar 10 16:35:06 2001
++++ ToutDoux-1.2.6/doc/fr/Makefile.am	Wed Aug 14 08:41:19 2002
+@@ -97,7 +97,7 @@
+ 	if test $(HAVE_LANG_FR) = yes; \
+ 	then \
+ 	  $(mkinstalldirs) $(DESTDIR)$(TARGET_DIR); \
+-	  for file in toutdoux/*.html toutdoux/*.css; do \
++	  for file in toutdoux/* ; do \
+ 	    basefile=`echo $$file | sed -e 's,^.*/,,'`; \
+ 	    $(INSTALL_DATA) $$file $(DESTDIR)$(TARGET_DIR)/$$basefile; \
+ 	  done; \
