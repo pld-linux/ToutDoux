@@ -40,7 +40,7 @@ gettextize --copy --force
 LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--disable-static
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
