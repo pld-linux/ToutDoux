@@ -5,6 +5,7 @@ Version:	1.2.6
 Release:	1
 License:	GPL
 Group:		Applications/Database
+######		Unknown group!
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
 URL:		http://toutdoux.sourceforge.net/
 BuildRequires:	gtk+-devel >= 1.2.0
@@ -14,19 +15,21 @@ BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	libxml-devel
 BuildRequires:	gdk-pixbuf-devel >= 0.9.0
-BuildRequires:	postgresql-devel
+BuildRequires:	postgresql-devel >= 7.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
 
 %description
-ToutDoux is a project manager which permits management with different views (based on plugins).     For example, you can design a plan of actions using a tree structure.
+ToutDoux is a project manager which permits management with different
+views (based on plugins). For example, you can design a plan of
+actions using a tree structure.
 
 %description -l pl
 ToutDout jest programem do zarz±dzania projektami pozwalaj±cym na
-uwzglêdnianie ró¿nych punktów widzenia (bazuj±c na pluginach). Mo¿esz np.
-projektowaæ plan zadañ u¿ywaj±c struktury drzewiastej.
+uwzglêdnianie ró¿nych punktów widzenia (bazuj±c na pluginach). Mo¿esz
+np. projektowaæ plan zadañ u¿ywaj±c struktury drzewiastej.
 
 %package devel
 Summary:	%{name} libraries, includes, etc
@@ -74,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	gmenudir=%{_applnkdir}/Applications
+	gmenudir=%{_applnkdir}/Utilities
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
@@ -98,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/toutdoux/*
 %{_pixmapsdir}/*.*
 %{_datadir}/toutdoux
-%{_applnkdir}/*
+%{_applnkdir}/*/*
 %{_datadir}/mime-info/*
 
 %files devel
