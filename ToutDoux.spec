@@ -14,7 +14,10 @@ BuildRequires:	XFree86-devel
 BuildRequires:	bison
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libtool
+BuildRequires:	gettext-devel
 BuildRequires:	libxml-devel
 BuildRequires:	gdk-pixbuf-devel >= 0.9.0
 BuildRequires:	postgresql-devel >= 7.1
@@ -65,7 +68,7 @@ Biblioteki statyczne z funkcjami %{name}.
 %patch0 -p1
 
 %build
-rm missing
+rm -f missing
 libtoolize --copy --force
 gettextize --copy --force
 aclocal -I %{_aclocaldir}/gnome
@@ -87,11 +90,11 @@ gzip -9nf AUTHORS ChangeLog NEWS README
 
 %find_lang %{name} --with-gnome
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
