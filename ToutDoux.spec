@@ -7,10 +7,11 @@ Group:		Networking
 Group(pl):	Sieciowe
 Source0:	http://altern.org/toutdoux/dl/%{name}-%{version}.tar.gz
 URL:		http://altern.org/toutdoux/en/
-BuildRequires:	libxml-devel
+BuildRequires:	postgresql-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	gettext-devel
+BuildRequires:	libxml-devel
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
