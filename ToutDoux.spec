@@ -77,7 +77,7 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure  \
-	--with-gnome 
+	--with-gnome
 %{__make}
 
 %install
