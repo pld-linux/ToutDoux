@@ -1,13 +1,13 @@
 Summary:	ToutDoux is a small project manager (for GNOME)
 Name:		ToutDoux
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking
 Group(pl):	Sieciowe
 Source0:	http://altern.org/toutdoux/dl/%{name}-%{version}.tar.gz
 URL:		http://altern.org/toutdoux/en/
-BuildRequires:	postgresql-devel
+BuildRequires:	postgresql-devel >= 7.0
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	gettext-devel
