@@ -5,11 +5,10 @@ Version:	1.2.7
 Release:	1
 License:	GPL
 Group:		Applications/Databases
-Source0:	http://ftp.gnu.org/gnu/toutdoux/%{name}-%{version}.tar.gz
+Source0:	http://www.gnu.org/software/toutdoux/source/%{name}-%{version}.tar.gz
 # Source0-md5:	13eb83311422e447b88114e72155364d
-Patch0:		%{name}-xml.patch
-Patch1:		%{name}-configure.patch
-Patch2:		%{name}-am16.patch
+Patch0:		%{name}-configure.patch
+Patch1:		%{name}-am16.patch
 URL:		http://www.gnu.org/software/toutdoux/en/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -17,12 +16,15 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	docbook-utils >= 0.6.10
 BuildRequires:	gdk-pixbuf-devel >= 0.9.0
-BuildRequires:	gettext-devel
-BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	gnome-libs-devel
+BuildRequires:	gettext-devel >= 0.10.35
+# ??? not in PLD
+BuildRequires:	getxml >= 1.0.3
+BuildRequires:	gtk+-devel >= 1.2.1
+BuildRequires:	gnome-libs-devel >= 1.0.8
 BuildRequires:	html-dtd401-sgml
 BuildRequires:	libtool
-BuildRequires:	libxml-devel
+BuildRequires:	libxml2-devel >= 2.3.5
+BuildRequires:	openjade >= 1.2.1
 BuildRequires:	postgresql-devel >= 7.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	toutdoux
@@ -42,7 +44,7 @@ drzewiastej.
 Summary:	ToutDoux - includes, etc
 Summary(pl):	ToutDoux - pliki nag³ówkowe itp.
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Obsoletes:	toutdoux-devel
 
 %description devel
@@ -55,7 +57,7 @@ Pliki nag³ówkowe itp. do ToutDoux.
 Summary:	ToutDoux static libraries
 Summary(pl):	Biblioteki statyczne ToutDoux
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 ToutDoux static libraries.
@@ -67,13 +69,13 @@ Biblioteki statyczne z funkcjami ToutDoux.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
+
+echo 'Categories=Development;' >> toutdoux.desktop
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__gettextize}
-%{__aclocal} -I %{_aclocaldir}/gnome -I macros
+%{__aclocal} -I %{_aclocaldir}/gnome
 %{__autoconf}
 %{__automake}
 %configure  \
@@ -85,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	gmenudir=%{_applnkdir}/Utilities
+	gmenudir=%{_desktopdir}
 
 %find_lang %{name} --with-gnome
 
@@ -107,7 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/toutdoux/*
 %{_pixmapsdir}/*.*
 %{_datadir}/toutdoux
-%{_applnkdir}/*/*
+%{_desktopdir}/*.desktop
 %{_datadir}/mime-info/*
 
 %files devel
@@ -119,5 +121,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/toutdoux/plugins/lib*.a
 %{_libdir}/lib*.a
