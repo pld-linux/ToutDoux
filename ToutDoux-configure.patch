@@ -1,0 +1,141 @@
+diff -urN ToutDoux-1.2.6/configure ToutDoux-1.2.6.new/configure
+diff -urN ToutDoux-1.2.6/configure.in ToutDoux-1.2.6.new/configure.in
+--- ToutDoux-1.2.6/configure.in	Fri Mar  9 21:01:40 2001
++++ ToutDoux-1.2.6.new/configure.in	Sat Nov 17 15:30:36 2001
+@@ -337,39 +337,16 @@
+ templates/Makefile
+ templates/en/Makefile
+ templates/fr/Makefile
+-dnl scripts/Makefile
+-
+-dnl ***************************************************************************
+-dnl fr: Script de compilation : Bibliothèque
+-dnl en: Compilation script : Library
+-dnl ***************************************************************************
+-
+ lib/Makefile
+-
+-dnl ***************************************************************************
+-dnl fr: Script de compilation : Application
+-dnl en: Compilation script : Application
+-dnl ***************************************************************************
+-
+ app/Makefile
+ app/share/Makefile
+ app/share/en/Makefile
+ app/share/fr/Makefile
+-
+-dnl ***************************************************************************
+-dnl fr: Script de compilation : Greffons noyaux
+-dnl en: Compilation script : Core plug-ins
+-dnl ***************************************************************************
+-
+ core-plugins/Makefile
+-
+-dnl core-plugins/dialog_editor/Makefile
+-dnl core-plugins/dialog_editor/share/Makefile
+ core-plugins/dialog_messages/Makefile
+ core-plugins/tools_query/Makefile
+ core-plugins/tools_import_export/Makefile
+ core-plugins/tools_oldfile/Makefile
+-
+ core-plugins/help_about/Makefile
+ core-plugins/help_customize/Makefile
+ core-plugins/help_doc/Makefile
+@@ -378,96 +355,33 @@
+ core-plugins/help_bookmarks/share/Makefile
+ core-plugins/help_bookmarks/share/en/Makefile
+ core-plugins/help_bookmarks/share/fr/Makefile
+-
+-dnl core-plugins/communication_db/Makefile
+-dnl core-plugins/communication_db/share/Makefile
+-dnl core-plugins/communication_db/share/en/Makefile
+-dnl core-plugins/communication_db/share/fr/Makefile
+ core-plugins/communication_url/Makefile
+-
+ core-plugins/database_postgresql/Makefile
+-dnl core-plugins/database_mysql/Makefile
+-
+-dnl ***************************************************************************
+-dnl fr: Script de compilation : Greffons de données : Construction
+-dnl en: Compilation script : Data plug-ins : Build
+-dnl ***************************************************************************
+-
+ data-plugins/Makefile
+-
+ data-plugins/cogitation/Makefile
+ data-plugins/cogitation/share/Makefile
+ data-plugins/cogitation/share/en/Makefile
+ data-plugins/cogitation/share/fr/Makefile
+-
+-dnl ***************************************************************************
+-dnl fr: Script de compilation : Greffons de données : Générale
+-dnl en: Compilation script : Data plug-ins : General
+-dnl ***************************************************************************
+-
+-dnl data-plugins/general/Makefile
+-
+-dnl data-plugins/general/tree/Makefile
+-dnl data-plugins/general/tree/share/Makefile
+-dnl data-plugins/general/tree/share/en/Makefile
+-dnl data-plugins/general/tree/share/fr/Makefile
+-
+-dnl data-plugins/general/mindmap/Makefile
+-dnl data-plugins/general/mindmap/share/Makefile
+-dnl data-plugins/general/mindmap/share/en/Makefile
+-dnl data-plugins/general/mindmap/share/fr/Makefile
+-
+-dnl ***************************************************************************
+-dnl fr: Script de compilation : Greffons de données : Gestionnaire de projet
+-dnl en: Compilation script : Data plug-ins : Project manager
+-dnl ***************************************************************************
+-
+ data-plugins/project/Makefile
+-
+ data-plugins/project/actionplan/Makefile
+ data-plugins/project/actionplan/share/Makefile
+ data-plugins/project/actionplan/share/en/Makefile
+ data-plugins/project/actionplan/share/fr/Makefile
+-
+ data-plugins/project/pert/Makefile
+ data-plugins/project/pert/share/Makefile
+ data-plugins/project/pert/share/en/Makefile
+ data-plugins/project/pert/share/fr/Makefile
+-
+ data-plugins/project/gantt/Makefile
+ data-plugins/project/gantt/share/Makefile
+ data-plugins/project/gantt/share/en/Makefile
+ data-plugins/project/gantt/share/fr/Makefile
+-
+ data-plugins/project/amdec/Makefile
+ data-plugins/project/amdec/share/Makefile
+ data-plugins/project/amdec/share/en/Makefile
+ data-plugins/project/amdec/share/fr/Makefile
+-
+-dnl ***************************************************************************
+-dnl fr: Script de compilation : Dorsaux
+-dnl en: Compilation script : Backends
+-dnl ***************************************************************************
+-
+-dnl backends/Makefile
+-
+-dnl backends/hupli/Makefile
+-dnl backends/hupli/app/Makefile
+-dnl backends/hupli/plugins/Makefile
+-dnl backends/hupli/plugins/sgml/Makefile
+-dnl backends/hupli/plugins/tex/Makefile
+-dnl backends/hupli/doc/Makefile
+-dnl backends/hupli/doc/examples/Makefile
+-
+-dnl ***************************************************************************
+-dnl fr: Script de compilation : Documentation
+-dnl en: Compilation script : Documentation
+-dnl ***************************************************************************
+-
+ doc/Makefile
+ doc/en/Makefile
+ doc/fr/Makefile
+-
+ doc-devel/Makefile
+ doc-devel/en/Makefile
+ doc-devel/fr/Makefile
