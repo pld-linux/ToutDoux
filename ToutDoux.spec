@@ -2,13 +2,14 @@ Summary:	Project manager
 Summary(pl):	Zarz±dca projektów
 Name:		ToutDoux
 Version:	1.2.6
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Databases
 Group(de):	Applikationen/Dateibanken
 Group(pl):	Aplikacje/Bazy danych
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-xml.patch
+Patch1:		%{name}-configure.patch
 URL:		http://toutdoux.sourceforge.net/
 BuildRequires:	XFree86-devel
 BuildRequires:	bison
@@ -32,7 +33,7 @@ views (based on plugins). For example, you can design a plan of
 actions using a tree structure.
 
 %description -l pl
-ToutDout jest programem do zarz±dzania projektami pozwalaj±cym na
+ToutDoux jest programem do zarz±dzania projektami pozwalaj±cym na
 uwzglêdnianie ró¿nych punktów widzenia (bazuj±c na pluginach). Mo¿esz
 np. projektowaæ plan zadañ u¿ywaj±c struktury drzewiastej.
 
@@ -67,17 +68,18 @@ Biblioteki statyczne z funkcjami %{name}.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
 libtoolize --copy --force
 gettextize --copy --force
-aclocal -I %{_aclocaldir}/gnome
+aclocal -I %{_aclocaldir}/gnome -I macros
 autoconf
 automake -a -c
 %configure  \
 	--with-gnome \
-	--without-included-gettext
+	--with-included-gettext
 %{__make}
 
 %install
