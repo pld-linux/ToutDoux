@@ -34,33 +34,34 @@ actions using a tree structure.
 
 %description -l pl
 ToutDoux jest programem do zarz±dzania projektami pozwalaj±cym na
-uwzglêdnianie ró¿nych punktów widzenia (bazuj±c na pluginach). Mo¿esz
-np. projektowaæ plan zadañ u¿ywaj±c struktury drzewiastej.
+uwzglêdnianie ró¿nych punktów widzenia (bazuj±c na pluginach). Mo¿na
+za jego pomoc± np. projektowaæ plan zadañ u¿ywaj±c struktury
+drzewiastej.
 
 %package devel
-Summary:	%{name} libraries, includes, etc
-Summary(pl):	%{name} - pliki nag³ówkowe, etc
+Summary:	ToutDoux - includes, etc
+Summary(pl):	ToutDoux - pliki nag³ówkowe itp.
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 Obsoletes:	toutdoux-devel
 
 %description devel
-Header files for %{name}.
+Header files for ToutDoux.
 
-%description -l pl devel
-Pliki nag³ówkowe etc do %{name}.
+%description devel -l pl
+Pliki nag³ówkowe itp. do ToutDoux.
 
 %package static
-Summary:	%{name} static libraries
-Summary(pl):	Biblioteki statyczne hOpla
+Summary:	ToutDoux static libraries
+Summary(pl):	Biblioteki statyczne ToutDoux
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
-%{name} static libraries.
+ToutDoux static libraries.
 
-%description -l pl static
-Biblioteki statyczne z funkcjami %{name}.
+%description static -l pl
+Biblioteki statyczne z funkcjami ToutDoux.
 
 %prep
 %setup -q
