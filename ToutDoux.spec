@@ -2,21 +2,21 @@ Summary:	Project manager
 Summary(pl):	Zarz±dca projektów
 Name:		ToutDoux
 Version:	1.2.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Databases
 Group(pl):	Aplikacje/Bazy danych
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-xml.patch
 URL:		http://toutdoux.sourceforge.net/
-BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	XFree86-devel
+BuildRequires:	bison
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	glib-devel >= 1.2.0
+BuildRequires:	libtool
 BuildRequires:	libxml-devel
 BuildRequires:	gdk-pixbuf-devel >= 0.9.0
-BuildRequires:	postgresql-devel >= 7.0
+BuildRequires:	postgresql-devel >= 7.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -65,6 +65,7 @@ Biblioteki statyczne z funkcjami %{name}.
 
 %build
 rm missing
+libtoolize --copy --force
 gettextize --copy --force
 aclocal -I %{_aclocaldir}/gnome
 autoconf
