@@ -6,7 +6,7 @@ License:	GPL
 Group:		Networking
 Group(pl):	Sieciowe
 Source0:	http://altern.org/toutdoux/dl/%{name}-%{version}.tar.gz
-Patch:		ToutDoux-DESTDIR.patch
+Patch0:		ToutDoux-DESTDIR.patch
 URL:		http://altern.org/toutdoux/en/
 BuildRequires:	libxml-devel
 BuildRequires:	gnome-libs-devel
