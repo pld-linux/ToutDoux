@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/{,toutdoux/plugins/}lib*so.*.*
 
-gzip -9nf NEWS README TODO
+gzip -9nf NEWS README
 
 %find_lang %{name}
 
