@@ -72,7 +72,7 @@ Biblioteki statyczne z funkcjami %{name}.
 rm -f missing
 %{__libtoolize}
 %{__gettextize}
-aclocal -I %{_aclocaldir}/gnome -I macros
+%{__aclocal} -I %{_aclocaldir}/gnome -I macros
 %{__autoconf}
 %{__automake}
 %configure  \
