@@ -69,7 +69,7 @@ Biblioteki statyczne z funkcjami %{name}.
 %build
 rm -f missing
 %{__libtoolize}
-gettextize --copy --force
+%{__gettextize}
 aclocal -I %{_aclocaldir}/gnome -I macros
 %{__autoconf}
 %{__automake}
