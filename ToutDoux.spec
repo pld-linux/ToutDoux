@@ -21,6 +21,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	libxml-devel
 BuildRequires:	gdk-pixbuf-devel >= 0.9.0
 BuildRequires:	postgresql-devel >= 7.1
+BuildRequires:	html-dtd401-sgml
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -83,8 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	gmenudir=%{_applnkdir}/Utilities
-
-gzip -9nf AUTHORS ChangeLog NEWS README
 
 %find_lang %{name} --with-gnome
 
