@@ -1,51 +1,11 @@
---- ToutDoux-1.2.6/Makefile.am~	Wed Jun 12 01:12:07 2002
-+++ ToutDoux-1.2.6/Makefile.am	Wed Jun 12 01:12:07 2002
-@@ -55,7 +55,7 @@
- 	doc-devel \
- 	templates
- # 	backends \
--# 	scripts \
-+# 	scripts
- 
- # *****************************************************************************
- # Installation
---- ToutDoux-1.2.6/core-plugins/Makefile.am~	Wed Jun 12 01:13:00 2002
-+++ ToutDoux-1.2.6/core-plugins/Makefile.am	Wed Jun 12 01:13:00 2002
-@@ -53,12 +53,4 @@
- 
+--- ToutDoux-1.2.7/core-plugins/Makefile.am.orig	2001-05-16 01:27:57.000000000 +0200
++++ ToutDoux-1.2.7/core-plugins/Makefile.am	2004-04-08 22:25:41.257578448 +0200
+@@ -54,7 +54,7 @@
+ 	help_xts \
+ 	help_bookmarks
  # 	dialog_editor \
- # 	database_mysql \
 -# 	communication_db \
--
--
--
--
--
--
--
--
 +# 	communication_db
-diff -uNr ToutDoux-1.2.6.orig/doc/en/Makefile.am ToutDoux-1.2.6/doc/en/Makefile.am
---- ToutDoux-1.2.6.orig/doc/en/Makefile.am	Sat Mar 10 16:36:04 2001
-+++ ToutDoux-1.2.6/doc/en/Makefile.am	Wed Aug 14 08:39:36 2002
-@@ -76,7 +76,7 @@
- 	if test $(HAVE_LANG_EN) = yes; \
- 	then \
- 	  $(mkinstalldirs) $(DESTDIR)$(TARGET_DIR); \
--	  for file in toutdoux/*.html toutdoux/*.css; do \
-+	  for file in toutdoux/* ; do \
- 	    basefile=`echo $$file | sed -e 's,^.*/,,'`; \
- 	    $(INSTALL_DATA) $$file $(DESTDIR)$(TARGET_DIR)/$$basefile; \
- 	  done; \
-diff -uNr ToutDoux-1.2.6.orig/doc/fr/Makefile.am ToutDoux-1.2.6/doc/fr/Makefile.am
---- ToutDoux-1.2.6.orig/doc/fr/Makefile.am	Sat Mar 10 16:35:06 2001
-+++ ToutDoux-1.2.6/doc/fr/Makefile.am	Wed Aug 14 08:41:19 2002
-@@ -97,7 +97,7 @@
- 	if test $(HAVE_LANG_FR) = yes; \
- 	then \
- 	  $(mkinstalldirs) $(DESTDIR)$(TARGET_DIR); \
--	  for file in toutdoux/*.html toutdoux/*.css; do \
-+	  for file in toutdoux/* ; do \
- 	    basefile=`echo $$file | sed -e 's,^.*/,,'`; \
- 	    $(INSTALL_DATA) $$file $(DESTDIR)$(TARGET_DIR)/$$basefile; \
- 	  done; \
+ 
+ 
+ toutdoux_sharedir = $(datadir)/toutdoux
