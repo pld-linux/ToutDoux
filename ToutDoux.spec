@@ -1,12 +1,11 @@
 Summary:	ToutDoux is a small project manager (for GNOME)
 Name:		ToutDoux
-Version:	1.1.8
+Version:	1.2.1
 Release:	1
 License:	GPL
 Group:		Networking
 Group(pl):	Sieciowe
 Source0:	http://altern.org/toutdoux/dl/%{name}-%{version}.tar.gz
-Patch0:		ToutDoux-DESTDIR.patch
 URL:		http://altern.org/toutdoux/en/
 BuildRequires:	libxml-devel
 BuildRequires:	gnome-libs-devel
@@ -23,30 +22,56 @@ ToutDoux is a small project manager (for GNOME).
 %description -l pl
 ToutDoux jest ma³ym mened¿erem projektów dla GNOME.
 
+%package devel
+Summary:	ToutDoux header files
+Group:		X11/Libraries
+Group(pl):	X11/Biblioteki
+Requires:	%{name} = %{version}
+
+%description devel
+ToutDoux header files.
+
 %prep
 %setup -q
-%patch -p1
 
 %build
-automake
 gettextize --copy --force
 LDFLAGS="-s"; export LDFLAGS
-%configure
+%configure \
+	--disable-static
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make DESTDIR=$RPM_BUILD_ROOT install
+make install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	gmenudir=%{_applnkdir}/Utilities
 
-gzip -9nf NEWS README
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/{,toutdoux/plugins/}lib*so.*.*
+
+gzip -9nf NEWS README TODO
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
-#%{_applnkdir}/
-%{_datadir}/pixmaps/*
+%attr(755,root,root) %{_libdir}/lib*so.*.*
+%dir %{_libdir}/toutdoux
+%dir %{_libdir}/toutdoux/plugins
+%attr(755,root,root) %{_libdir}/toutdoux/plugins/lib*so*
+%attr(755,root,root) %{_libdir}/toutdoux/plugins/lib*la
+%{_libdir}/toutdoux/compat.xml
+%{_applnkdir}/Utilities/*
+%{_datadir}/mime-info/*
+%{_datadir}/pixmaps/toutdoux*
+%{_datadir}/toutdoux
+
+%files devel
+%{_includedir}/*
+%attr(755,root,root) %{_libdir}/lib*so
