@@ -5,7 +5,8 @@ Version:	1.2.6
 Release:	7
 License:	GPL
 Group:		Applications/Databases
-Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnu.org/gnu/toutdoux/old/%{name}-%{version}.tar.gz
+# Source0-md5:	1ca5a3703d4a3b371b92f0a567d9d967
 Patch0:		%{name}-xml.patch
 Patch1:		%{name}-configure.patch
 Patch2:		%{name}-am16.patch
@@ -24,7 +25,7 @@ BuildRequires:	libtool
 BuildRequires:	libxml-devel
 BuildRequires:	postgresql-devel >= 7.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
+Obsoletes:	toutdoux
 
 %description
 ToutDoux is a project manager which permits management with different
@@ -41,6 +42,7 @@ Summary:	%{name} libraries, includes, etc
 Summary(pl):	%{name} - pliki nag³ówkowe, etc
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
+Obsoletes:	toutdoux-devel
 
 %description devel
 Header files for %{name}.
