@@ -68,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/toutdoux/plugins/lib*la
 %{_applnkdir}/Utilities/*
 %{_datadir}/mime-info/*
-%{_datadir}/pixmaps/toutdoux*
+%{_pixmapsdir}/toutdoux*
 %{_datadir}/toutdoux
 
 %files devel
