@@ -4,9 +4,10 @@ Name:		ToutDoux
 Version:	1.2.6
 Release:	1
 License:	GPL
-Group:		Applications/Database
-######		Unknown group!
+Group:		Applications/Databases
+Group(pl):	Aplikacje/Bazy danych
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
+Patch0:		%{name}-xml.patch
 URL:		http://toutdoux.sourceforge.net/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	XFree86-devel
@@ -60,6 +61,7 @@ Biblioteki statyczne z funkcjami %{name}.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm missing
