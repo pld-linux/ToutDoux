@@ -2,7 +2,7 @@ Summary:	Project manager
 Summary(pl):	Zarz±dca projektów
 Name:		ToutDoux
 Version:	1.2.6
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
@@ -72,8 +72,7 @@ aclocal -I %{_aclocaldir}/gnome -I macros
 autoconf
 automake -a -c -f
 %configure  \
-	--with-gnome \
-	--with-included-gettext
+	--with-gnome 
 %{__make}
 
 %install
