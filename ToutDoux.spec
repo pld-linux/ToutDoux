@@ -11,17 +11,18 @@ Patch1:		%{name}-configure.patch
 Patch2:		%{name}-am16.patch
 URL:		http://toutdoux.sourceforge.net/
 BuildRequires:	XFree86-devel
-BuildRequires:	bison
-BuildRequires:	gnome-libs-devel
-BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
-BuildRequires:	gettext-devel
-BuildRequires:	libxml-devel
+BuildRequires:	bison
+BuildRequires:	docbook-utils >= 0.6.10
 BuildRequires:	gdk-pixbuf-devel >= 0.9.0
-BuildRequires:	postgresql-devel >= 7.1
+BuildRequires:	gettext-devel
+BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	gnome-libs-devel
 BuildRequires:	html-dtd401-sgml
+BuildRequires:	libtool
+BuildRequires:	libxml-devel
+BuildRequires:	postgresql-devel >= 7.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
