@@ -8,6 +8,7 @@ Group:		Applications/Databases
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-xml.patch
 Patch1:		%{name}-configure.patch
+Patch2:		%{name}-am16.patch
 URL:		http://toutdoux.sourceforge.net/
 BuildRequires:	XFree86-devel
 BuildRequires:	bison
@@ -63,10 +64,11 @@ Biblioteki statyczne z funkcjami %{name}.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 gettextize --copy --force
 aclocal -I %{_aclocaldir}/gnome -I macros
 %{__autoconf}
@@ -94,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz doc/en/toutdoux/*
+%doc AUTHORS ChangeLog NEWS README doc/en/toutdoux/*
 %attr(755,root,root) %{_bindir}/toutdoux
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %dir %{_libdir}/toutdoux
