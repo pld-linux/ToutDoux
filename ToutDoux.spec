@@ -5,8 +5,6 @@ Version:	1.2.6
 Release:	5
 License:	GPL
 Group:		Applications/Databases
-Group(de):	Applikationen/Dateibanken
-Group(pl):	Aplikacje/Bazy danych
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-xml.patch
 Patch1:		%{name}-configure.patch
@@ -41,13 +39,6 @@ np. projektowaФ plan zadaЯ u©ywaj╠c struktury drzewiastej.
 Summary:	%{name} libraries, includes, etc
 Summary(pl):	%{name} - pliki nagЁСwkowe, etc
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/Разработка/Библиотеки
-Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -60,13 +51,6 @@ Pliki nagЁСwkowe etc do %{name}.
 Summary:	%{name} static libraries
 Summary(pl):	Biblioteki statyczne hOpla
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(es):	X11/Desarrollo/Bibliotecas
-Group(fr):	X11/Development/Librairies
-Group(pl):	X11/Programowanie/Biblioteki
-Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
-Group(ru):	X11/Разработка/Библиотеки
-Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
