@@ -6,6 +6,7 @@ Release:	7
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
+# Source0-md5:	1ca5a3703d4a3b371b92f0a567d9d967
 Patch0:		%{name}-xml.patch
 Patch1:		%{name}-configure.patch
 Patch2:		%{name}-am16.patch
