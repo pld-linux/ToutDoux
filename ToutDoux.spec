@@ -1,9 +1,10 @@
 Summary:	ToutDoux is a small project manager (for GNOME)
 Name:		ToutDoux
-Version:	1.2.3
+Version:	1.2.4
 Release:	1
 License:	GPL
 Group:		Networking
+Group(de):	Netzwerkwesen
 Group(pl):	Sieciowe
 Source0:	http://altern.org/toutdoux/dl/%{name}-%{version}.tar.gz
 URL:		http://altern.org/toutdoux/en/
@@ -26,6 +27,7 @@ ToutDoux jest ma³ym mened¿erem projektów dla GNOME.
 %package devel
 Summary:	ToutDoux header files
 Group:		X11/Libraries
+Group(de):	X11/Libraries
 Group(pl):	X11/Biblioteki
 Requires:	%{name} = %{version}
 
@@ -37,7 +39,6 @@ ToutDoux header files.
 
 %build
 gettextize --copy --force
-LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--disable-static
 %{__make}
@@ -48,8 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	gmenudir=%{_applnkdir}/Utilities
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/{,toutdoux/plugins/}lib*so.*.*
 
 gzip -9nf NEWS README
 
