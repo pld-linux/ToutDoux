@@ -1,6 +1,6 @@
 Summary:	ToutDoux is a small project manager (for GNOME)
 Name:		ToutDoux
-Version:	1.2.2
+Version:	1.2.3
 Release:	1
 License:	GPL
 Group:		Networking
