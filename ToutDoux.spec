@@ -2,7 +2,7 @@ Summary:	Project manager
 Summary(pl):	Zarz±dca projektów
 Name:		ToutDoux
 Version:	1.2.6
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Databases
 Group(de):	Applikationen/Dateibanken
@@ -56,6 +56,7 @@ Summary(pl):	Biblioteki statyczne hOpla
 Group:		X11/Development/Libraries
 Group(de):	X11/Entwicklung/Libraries
 Group(pl):	X11/Programowanie/Biblioteki
+Requires:	%{name}-devel = %{version}
 
 %description static
 %{name} static libraries.
