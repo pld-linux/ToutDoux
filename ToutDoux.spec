@@ -1,16 +1,16 @@
 Summary:	Project manager
 Summary(pl):	Zarz±dca projektów
 Name:		ToutDoux
-Version:	1.2.6
-Release:	7
+Version:	1.2.7
+Release:	1
 License:	GPL
 Group:		Applications/Databases
-Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
-# Source0-md5:	1ca5a3703d4a3b371b92f0a567d9d967
+Source0:	http://ftp.gnu.org/gnu/toutdoux/%{name}-%{version}.tar.gz
+# Source0-md5:	13eb83311422e447b88114e72155364d
 Patch0:		%{name}-xml.patch
 Patch1:		%{name}-configure.patch
 Patch2:		%{name}-am16.patch
-URL:		http://toutdoux.sourceforge.net/
+URL:		http://www.gnu.org/software/toutdoux/en/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
