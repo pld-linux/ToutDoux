@@ -2,7 +2,7 @@ Summary:	Project manager
 Summary(pl):	Zarz±dca projektów
 Name:		ToutDoux
 Version:	1.2.6
-Release:	6
+Release:	7
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
