@@ -20,6 +20,9 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 %description
 ToutDoux is a small project manager (for GNOME).
 
+%description -l pl
+ToutDoux jest ma³ym mened¿erem projektów dla GNOME.
+
 %prep
 %setup -q
 %patch -p1
