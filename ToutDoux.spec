@@ -5,6 +5,7 @@ Version:	1.2.6
 Release:	3
 License:	GPL
 Group:		Applications/Databases
+Group(de):	Applikationen/Dateibanken
 Group(pl):	Aplikacje/Bazy danych
 Source0:	http://toutdoux.sourceforge.net/pub/toutdoux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-xml.patch
