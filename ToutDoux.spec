@@ -70,7 +70,7 @@ libtoolize --copy --force
 gettextize --copy --force
 aclocal -I %{_aclocaldir}/gnome -I macros
 autoconf
-automake -a -c
+automake -a -c -f
 %configure  \
 	--with-gnome \
 	--with-included-gettext
