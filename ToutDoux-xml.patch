@@ -1,0 +1,108 @@
+diff -urN ToutDoux-1.2.6.org/core-plugins/help_bookmarks/share/en/bookmarks.xml.in ToutDoux-1.2.6/core-plugins/help_bookmarks/share/en/bookmarks.xml.in
+--- ToutDoux-1.2.6.org/core-plugins/help_bookmarks/share/en/bookmarks.xml.in	Fri Apr  6 18:38:09 2001
++++ ToutDoux-1.2.6/core-plugins/help_bookmarks/share/en/bookmarks.xml.in	Fri Apr  6 21:16:55 2001
+@@ -10,8 +10,10 @@
+  * Auteur - Author : Philippe Roy <ph_roy@toutdoux.org>
+  *
+  *
+- * Ce programme est un logiciel libre ; vous pouvez le redistribuer et/ou le modifier
+- * sous les termes de la licence publique générale GNU telle qu'elle est publiée par
++ * Ce programme est un logiciel libre ; vous pouvez le redistribuer et/ou
++le modifier
++ * sous les termes de la licence publique générale GNU telle qu'elle est
++publiée par
+  * la Free Software Foundation ; soit la version 2 de la licence, ou
+  * (comme vous voulez) toute version ultérieure.
+  *
+@@ -22,7 +24,8 @@
+  *
+  * Vous devriez avoir reçu une copie de la licence publique générale GNU
+  * avec ce programme ; si ce n'est pas le cas, écrivez à la Free Software
+- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307,
++USA.
+  *
+  *
+  * This program is free software; you can redistribute it and/or modify
+@@ -37,8 +40,10 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+- ***************************************************************************** -->
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307,
++USA.
++ *****************************************************************************
++-->
+ 
+ <database xmlns:ToutDoux="toutdoux/1.0.5" name="" comment="">
+   <tables/>
+@@ -48,9 +53,15 @@
+   <!-- favorites -->
+     <datatable table="td_favorites">
+       <items>
+-        <item field0="Examples" field1="" field2="" field3="" field4="" field5="" field6="" field7="" field8="" field9="folder" field10="1" field11="f"/>
+-        <item field0="ToutDoux" field1="" field2="" field3="" field4="" field5="" field6="" field7="" field8="@prefix@/doc/toutdoux/user/ToutDoux.td" field9="file" field10="2" field11="f"/>
+-        <item field0="ToutDoux web" field1="" field2="" field3="" field4="http://toutdoux.sourceforge.net/doc/ToutDoux.td" field5="" field6="" field7="" field8="" field9="url" field10="3" field11="f"/>
++        <item field0="Examples" field1="" field2="" field3="" field4=""
++field5="" field6="" field7="" field8="" field9="folder" field10="1"
++field11="f"/>
++        <item field0="ToutDoux" field1="" field2="" field3="" field4=""
++field5="" field6="" field7="" field8="@prefix@/doc/toutdoux/user/ToutDoux.td"
++field9="file" field10="2" field11="f"/>
++        <item field0="ToutDoux web" field1="" field2="" field3=""
++field4="http://toutdoux.sourceforge.net/doc/ToutDoux.td" field5=""
++field6="" field7="" field8="" field9="url" field10="3" field11="f"/>
+       </items>
+     </datatable>
+ 
+@@ -65,11 +76,17 @@
+     <!-- templates -->
+     <datatable table="td_templates">
+       <items>
+-        <item field0="Simple tasks list" field1="@prefix@/share/toutdoux/templates/en/tasks.td" field2="file" field3="1" field4="f"/>
+-        <item field0="Tasks list" field1="@prefix@/share/toutdoux/templates/en/tasks2.td" field2="file" field3="2" field4="f"/>
+-	<item field0="(TODO)" field1="" field2="folder" field3="3" field4="f"/>
+-        <item field0="GANTT" field1="@prefix@/share/toutdoux/templates/en/gantt.td" field2="file" field3="4" field4="f"/>
+-        <item field0="PERT" field1="@prefix@/share/toutdoux/templates/en/pert.td" field2="file" field3="5" field4="f"/>
++        <item field0="Simple tasks list"
++field1="@prefix@/share/toutdoux/templates/en/tasks.td" field2="file"
++field3="1" field4="f"/>
++        <item field0="Tasks list" field1="@prefix@/share/toutdoux/templates/en/tasks2.td"
++field2="file" field3="2" field4="f"/>
++	<item field0="(TODO)" field1="" field2="folder" field3="3"
++field4="f"/>
++        <item field0="GANTT" field1="@prefix@/share/toutdoux/templates/en/gantt.td"
++field2="file" field3="4" field4="f"/>
++        <item field0="PERT" field1="@prefix@/share/toutdoux/templates/en/pert.td"
++field2="file" field3="5" field4="f"/>
+       </items>
+     </datatable>
+ 
+@@ -78,7 +95,7 @@
+         <item field0="1" field1="0" field2="2"/>
+         <item field0="2" field1="0" field2="3"/>
+         <item field0="3" field1="0" field2="0"/>
+-        <item field0="4" field1="3" field2="0"/>
++        <item field0="4" field1="3" field2="5"/>
+         <item field0="5" field1="3" field2="0"/>
+       </items>
+     </datatable>
+@@ -86,7 +103,8 @@
+     <!-- commands -->
+     <datatable table="td_commands">
+       <items>
+-        <item field0="csv" field1="" field2="" field3="csv" field4="export" field5="command" field6="1" field7="f"/>
++        <item field0="csv" field1="" field2="" field3="csv" field4="export"
++field5="command" field6="1" field7="f"/>
+       </items>
+     </datatable>
+ 
+@@ -102,7 +120,6 @@
+ 
+   </datatables>
+ </database>
+-
+ 
+ 
+ 
