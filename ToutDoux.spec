@@ -25,8 +25,6 @@ BuildRequires:	libxml-devel
 BuildRequires:	postgresql-devel >= 7.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 ToutDoux is a project manager which permits management with different
