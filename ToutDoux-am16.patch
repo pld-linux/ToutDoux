@@ -1,0 +1,27 @@
+--- ToutDoux-1.2.6/Makefile.am~	Wed Jun 12 01:12:07 2002
++++ ToutDoux-1.2.6/Makefile.am	Wed Jun 12 01:12:07 2002
+@@ -55,7 +55,7 @@
+ 	doc-devel \
+ 	templates
+ # 	backends \
+-# 	scripts \
++# 	scripts
+ 
+ # *****************************************************************************
+ # Installation
+--- ToutDoux-1.2.6/core-plugins/Makefile.am~	Wed Jun 12 01:13:00 2002
++++ ToutDoux-1.2.6/core-plugins/Makefile.am	Wed Jun 12 01:13:00 2002
+@@ -53,12 +53,4 @@
+ 
+ # 	dialog_editor \
+ # 	database_mysql \
+-# 	communication_db \
+-
+-
+-
+-
+-
+-
+-
+-
++# 	communication_db
