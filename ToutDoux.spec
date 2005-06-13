@@ -89,6 +89,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	gmenudir=%{_desktopdir}
 
+rm -rf $RPM_BUILD_ROOT%{_datadir}/mime-info
+
 %find_lang %{name} --with-gnome
 
 %clean
@@ -110,7 +112,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/*.*
 %{_datadir}/toutdoux
 %{_desktopdir}/*.desktop
-%{_datadir}/mime-info/*
 
 %files devel
 %defattr(644,root,root,755)
