@@ -1,5 +1,5 @@
 Summary:	Project manager
-Summary(pl.UTF-8):   Zarządca projektów
+Summary(pl.UTF-8):	Zarządca projektów
 Name:		ToutDoux
 Version:	1.2.7
 Release:	1
@@ -42,7 +42,7 @@ drzewiastej.
 
 %package devel
 Summary:	ToutDoux - includes, etc
-Summary(pl.UTF-8):   ToutDoux - pliki nagłówkowe itp.
+Summary(pl.UTF-8):	ToutDoux - pliki nagłówkowe itp.
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	toutdoux-devel
@@ -55,7 +55,7 @@ Pliki nagłówkowe itp. do ToutDoux.
 
 %package static
 Summary:	ToutDoux static libraries
-Summary(pl.UTF-8):   Biblioteki statyczne ToutDoux
+Summary(pl.UTF-8):	Biblioteki statyczne ToutDoux
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
