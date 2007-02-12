@@ -1,5 +1,5 @@
 Summary:	Project manager
-Summary(pl):	Zarz±dca projektów
+Summary(pl.UTF-8):   ZarzÄ…dca projektÃ³w
 Name:		ToutDoux
 Version:	1.2.7
 Release:	1
@@ -34,15 +34,15 @@ ToutDoux is a project manager which permits management with different
 views (based on plugins). For example, you can design a plan of
 actions using a tree structure.
 
-%description -l pl
-ToutDoux jest programem do zarz±dzania projektami pozwalaj±cym na
-uwzglêdnianie ró¿nych punktów widzenia (bazuj±c na pluginach). Mo¿na
-za jego pomoc± np. projektowaæ plan zadañ u¿ywaj±c struktury
+%description -l pl.UTF-8
+ToutDoux jest programem do zarzÄ…dzania projektami pozwalajÄ…cym na
+uwzglÄ™dnianie rÃ³Å¼nych punktÃ³w widzenia (bazujÄ…c na pluginach). MoÅ¼na
+za jego pomocÄ… np. projektowaÄ‡ plan zadaÅ„ uÅ¼ywajÄ…c struktury
 drzewiastej.
 
 %package devel
 Summary:	ToutDoux - includes, etc
-Summary(pl):	ToutDoux - pliki nag³ówkowe itp.
+Summary(pl.UTF-8):   ToutDoux - pliki nagÅ‚Ã³wkowe itp.
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	toutdoux-devel
@@ -50,19 +50,19 @@ Obsoletes:	toutdoux-devel
 %description devel
 Header files for ToutDoux.
 
-%description devel -l pl
-Pliki nag³ówkowe itp. do ToutDoux.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe itp. do ToutDoux.
 
 %package static
 Summary:	ToutDoux static libraries
-Summary(pl):	Biblioteki statyczne ToutDoux
+Summary(pl.UTF-8):   Biblioteki statyczne ToutDoux
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 ToutDoux static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne z funkcjami ToutDoux.
 
 %prep
