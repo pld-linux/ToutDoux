@@ -16,7 +16,7 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	docbook-utils >= 0.6.10
 BuildRequires:	gdk-pixbuf-devel >= 0.9.0
-BuildRequires:	gettext-devel >= 0.10.35
+BuildRequires:	gettext-tools >= 0.10.35
 # ??? not in PLD
 BuildRequires:	getxml >= 1.0.3
 BuildRequires:	gtk+-devel >= 1.2.1
